@@ -1,1 +1,0 @@
-[{"KO1":"Online","KO2":"Online","EN1":"Offline","EN2":"Offline"}]
