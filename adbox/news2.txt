@@ -1,1 +1,1 @@
-[{"title":"[광고] 앱 개발자 유튜브 채널","text":"한번씩 구독 부탁드립니다~~!","buttonname":"구독하기","link":"http://youtube.blackcats4567.com","ver":"2"}]
+[{"title":"홍보박스 출시! 홍보해주세요!!","text":"앱을 공유하여 더 많은 사람들에게 나의 것을 홍보하세요ㅣ","buttonname":"공유하기","link":"[Share]https://play.google.com/store/apps/details?id=com.blackcat.adbox","ver":"1"}]
