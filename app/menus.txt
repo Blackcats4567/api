@@ -2,9 +2,5 @@
 {
         "name" : "About",
         "url" : "https://api.blackcats4567.com/app/menu/about.html"
-},
-{
-        "name" : "Null",
-        "url" : "https://api.blackcats4567.com/404.html"
 }
 ]
