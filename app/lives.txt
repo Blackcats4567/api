@@ -120,7 +120,7 @@
         "url" : "https://www.youtube.com/watch?v=AX79VlFohkY"
 },
 {
-        "title" : "검정고양이 서버 운영(2018/03/17)",
+        "title" : "테스트용 스트리밍",
         "date" : "2018.01.12",
         "url" : "https://www.youtube.com/watch?v=QOPFm_YO_tw"
 }
