@@ -5,6 +5,6 @@
 },
 {
         "name" : "커뮤니티",
-        "url" : "https://api.blackcats4567.com/app/menu/community.html"
+        "url" : "https://api.blackcats4567.com/app/menu/communityko.html"
 }
 ]
