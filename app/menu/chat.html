@@ -90,7 +90,7 @@ function writeUserData() {
 
   // sava data
 
-  database.ref('svd/' + id.toString()).set({
+  database.ref('blackcat/' + id.toString()).set({
 
     username: $name.value,
 
@@ -108,7 +108,7 @@ function writeUserData() {
 
 function getUserData() {
 
-  database.ref('svd2/').once('value').then(function(snapshot) {
+  database.ref('blackcat/').once('value').then(function(snapshot) {
 
     $preloader.style.display = 'none';
 
