@@ -1,0 +1,169 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.991.0">
+<p style="text-align: center;"><span style="font-size:36px;"><strong><span style="font-family:comic sans ms,cursive;">Blackcats4567</span>&nbsp;앱 채팅(대한민국에서만 제공됨)</strong></span></p>
+
+<hr />
+
+<h2>Blackcats4567 채팅에 오신 것을 환영합니다!</h2>
+<p>(주의: 개인정보,성적 용어,욕설이 포함된 채팅을 하지 않도록 주의해주세요)</p>
+
+  <div class="controls">
+
+ <input type="text" id="name" placeholder="이름">
+
+        <br>
+
+<input type="text" id="score" placeholder="채팅">
+
+      <br>
+
+      <button onclick="writeUserData()" id="save">등록</button>
+
+  </div>
+
+  <br>
+
+  <div id="loading">[채팅을 불러오는 중..]</div>
+
+  <div id="output" style="border: 1px  blue;"></div>
+
+
+<script>
+
+    // Initialize Firebase
+
+  var config = {
+
+    apiKey: "AIzaSyCqpNxdq7H6wwFpkSkDCwrDFzl0fhdB3OU",
+
+    databaseURL: "https://ppouqqurunsvlist.firebaseio.com/",
+
+    projectId: "ppouqqurunsvlist" 
+
+  };
+
+ 
+
+  firebase.initializeApp(config);
+
+  firebase.database.INTERNAL.forceWebSockets();
+
+  var database = firebase.database();
+
+// init elements
+
+  var $name, $scope, $output, id, $preloader;
+
+  $name = document.getElementById('name');
+
+  $score = document.getElementById('score');
+
+  $output = document.getElementById('output');
+
+  $preloader = document.getElementById('loading');
+
+  
+
+  getUserData();
+
+  
+
+
+
+
+function writeUserData() {
+
+  // generate id for database record
+
+  id =  Date.now();
+
+  if ($name.value.length === 0 || $score.value === 0) {
+
+    alert('도배하지 마세요!');
+
+    return;
+
+  }
+
+  // sava data
+
+  database.ref('svd/' + id.toString()).set({
+
+    username: $name.value,
+
+    score: $score.value
+
+  });
+
+  $score.value = '';
+  $name.value = '';
+
+  getUserData();
+
+}
+
+
+function getUserData() {
+
+  database.ref('svd2/').once('value').then(function(snapshot) {
+
+    $preloader.style.display = 'none';
+
+    var data = snapshot.val();
+
+    // clear output
+
+    $output.innerHTML = '';
+
+    for (var property in data) {
+
+      // get object with name and score
+
+      var objectWithData = data[property + ''];
+
+      // get name
+
+      var name = objectWithData['username'];
+
+      // create h1 with name
+
+      var nameElem = document.createElement('span');
+
+      nameElem.style.color = "indigo";
+
+      nameElem.innerHTML = name;
+
+      // append h1 to wrap
+
+      $output.appendChild(nameElem);
+
+      // same for the score
+
+       // get name
+
+       
+
+      var score = objectWithData['score'];
+
+      var scoreElem = document.createElement('span');
+
+      scoreElem.innerHTML = " 》" + score + "<br>";
+
+      scoreElem.style.color = "black";
+
+      $output.appendChild(scoreElem);
+
+    }
+
+});
+
+}
+
+</script> 
+
+
+</body>
+</html>
