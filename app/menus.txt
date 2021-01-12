@@ -2,5 +2,9 @@
 {
         "name" : "About",
         "url" : "https://api.blackcats4567.com/app/menu/about.html"
+},
+{
+        "name" : "Community",
+        "url" : "https://api.blackcats4567.com/app/menu/community.html"
 }
 ]
