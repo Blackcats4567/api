@@ -1,5 +1,10 @@
 [
 {
+        "title" : "[LIVE] Join My Minecraft Server",
+        "date" : "2021.01.23 ~ 2021.01.24",
+        "url" : "https://youtu.be/0_3qkODcRs8"
+},
+{
         "title" : "[LIVE] LOOP",
         "date" : "2021.01.19 ~ 2021.01.21",
         "url" : "https://youtu.be/3TAi2Qe6TrE"
